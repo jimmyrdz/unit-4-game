@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+     <title>Unit-4-Game</title>
+ </head>
+ <body>
+          <!-- classes and divs -->
+     <div class="wrapper">
+      
+      <div class="header">
+        <h1>Jaime's Ingot Collector</h1>
+      </div>
+      
+      <div class="description">
+        <p> You will be given a random number at the start of the game. </p>
+
+        <p> There are four crystals below. By clicking on the crystal you 
+        will add a specific amount of points to your total score. </p>
+
+        <p> You win the game by matching your total score to a random 
+        number, you lose the game if your total score goes above
+        the random number. </p>
+
+        <p> The value of each crystal is hidden from you until you 
+        click on it. </p>
+
+        <p> Each time when the game starts, the game will change the 
+        values of each crystal.</p>
+      </div>
+        
+      <div class="randomCompNumberBox" id="randomCompNumberBox"></div>
+
+      <div class="winsBox" id="wins">WINS: </div>
+
+      <div class="lossesBox" id="losses">LOSSES: </div>
+    
+      <div class="ingot" id="0" onclick="addToScore(this.id)">
+          <img src="assets/images/coal.png" alt="coal"></img>
+      </div>
+      
+      <div class="ingot" id="1" onclick="addToScore(this.id)">
+          <img src="assets/images/diamond.png" alt="diamond"></img>
+      </div>
+    
+      <div class="ingot" id="2" onclick="addToScore(this.id)">
+          <img src="assets/images/gold.png" alt="gold"></img>
+      </div>
+      
+      <div class="ingot" id="3" onclick="addToScore(this.id)">
+          <img src="assets/images/iron.png" alt="iron"></img>
+      </div>
+     
+      <div class="playerScore" id="playerScore">PLAYER SCORE: </div>
+      <div class="clear" onclick="clearGame()">CLEAR</div>
+        
+     </div>
+
+     <script src="assets/javascript/game.js"></script>
+
+ </body>
+ </html>
+
+ <style>
+        body {
+           background-image: url("assets/images/background.jpg");
+           padding-top: 20px;
+        }
+    </style>
